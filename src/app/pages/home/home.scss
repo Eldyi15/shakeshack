@@ -9,11 +9,12 @@
 
     .hero-content {
         text-align: center;
-        position: relative;
+        position: absolute;
         .image-container {
+            width: 100%;
             img {
                 border-radius: 20px;
-                max-width: 80%;
+                max-width: 100%;
                 height: auto;
             }
         }
@@ -21,14 +22,14 @@
             background-color: #e3e2dd;
             padding: 10px 20px;
             border-radius: 10px;
-            box-shadow: 0 0 6px #bfd7d0;
+            box-shadow: 0 0 10px #beddd4;
             margin-top: 20px;
             font-size: 2rem;
             color: #4e4234;
             display: block;
             position: absolute;
             top: 50%;
-            right: 15%;
+            right: 10%;
             transform: translateY(-50%);
         }
         h1.order-now-link:hover {
@@ -37,4 +38,46 @@
             cursor: pointer;
         }
     }
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between lines and text */
+  width: 100%;
+  margin: 40px 0;
+}
+
+.section-header .line {
+  flex: 1;
+  height: 2px; /* Thickness of the line */
+  background-color: #739e9e; /* Muted teal/cyan color matching your image */
+}
+
+.section-header .title {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Use your brand font */
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4a3b32; /* Deep brown color matching your theme */
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.featured-shakes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  .shake-card {
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px; /* Set a fixed height for the shake cards */
+    width: 400px;
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
 }
