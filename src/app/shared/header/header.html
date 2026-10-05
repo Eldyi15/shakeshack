@@ -1,0 +1,19 @@
+<div class="shared-header">
+    <div class="nav-container-left">
+        @for (item of menu; track item.title; let idx = $index) {
+            @if (item.isLeft) {
+                <a [class.selected]="item.selected" [routerLink]="item.link" (click)="menuSelected(item.title)">{{ item.title }}</a>
+            }
+        }
+    </div>
+    <div class="logo-container">
+        <img src="/assets/shakeshacklogo.png" alt="Shake Shack logo">
+    </div>
+    <div class="nav-container-right">
+        @for (item of menu; track item.title; let idx = $index) {
+            @if (!item.isLeft) {
+                <a [class.selected]="item.selected" [routerLink]="item.link" (click)="menuSelected(item.title)">{{ item.title }}</a>
+            }
+        }
+    </div>
+</div>

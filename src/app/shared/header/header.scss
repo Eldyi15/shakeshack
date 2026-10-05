@@ -1,0 +1,52 @@
+.shared-header {
+    height: 144px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .nav-container-left {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        
+        img {
+            height: 120%;
+            width: auto;
+            max-height: 130px;
+        }
+    }
+
+    .nav-container-right {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 24px;
+    }
+
+    // Shared link styles
+    a {
+        color: #4e4234;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: #2c251d;
+        }
+
+        &.selected {
+            border-bottom: 2px solid #bfd7d0;
+        }
+    }
+}
